@@ -150,11 +150,114 @@
 		<p>Unix was created in 1969 at AT&ampT's Bell Labs</p>
 		<p>some open source projects that were cloned from or made for Unix include:
 			<ul class="list">
-				<li></li>
+				<li>the linux kernel: designed to be compatible with other Unix kernels</li>
+				<li>the GNU project: an effort by the Free Software Foundation (<span class="acro">FSF</span>) to make open source versions of core Unix elements <span class="note">note: GNU HURD is a kernel, but it's not as popular as Linux</span></li>
+				<li>Xorg-X11: a GUI environment for most Unix OSs</li>
+				<li>desktop environments: such as GNOME, KDE, Xfce - same as Linux OSs</li>
+				<li>server programs: Unix and Linux are both popular as server OSs - for web servers, email servers, file servers, etc.</li>
+				<li>user productivity programs: similar or the same as those in Linux OSs, but more available to Linux</li>
 			</ul>
 		</p>
+		<p>Linux is most similar to Unix than other OSs</p>
+		<h3 class="blue">Comparing Linux to Mac OS X (the 'X' here is the Roman numeral ten)</h3>
+		<p>Mac OS X is a commercial Unix-based OS that discards Unix's GUI (ie: X) and uses its own</p>
+		<p>many text commands are shared or can be installed on Mac</p>
+		<p>its GUI is called Cocoa to programmers and Aqua to users</p>
+		<p>it's not easy to get Cocoa programs to run on Linux (maybe even impossible), BUT Linux programs can work in Cocoa (however, their appearance tends to get a little scrambled in Aqua)</p>
+		<p>installing OSX on non Apple hardwdare is pointless -- it's extremely difficult, plus Apple legally forbids it</p>
+		<p>iOS is a variant that is equally non-portable</p>
+		<p>Linux can be installed on Apple hardware though</p>
+		<h3 class="blue">Comparing Linux to Windows</h3>
+		<p>this is the most likely comparison</p>
+		<p>they have similar capabilities, but the details are significantly different:
+			<ul class="list">
+				<li><u>Licensing</u>: Linux is open source; Windows is proprietary</li>
+				<li><u>Costs</u>: many Linux distributions cost nothing, but it takes effort to maintain and install them</li>
+				<li><u>Hardware Compatibility</u>: most hardware manufacturers provide drivers for Windows; Linux drivers may take a few weeks, months, or years to appear after the actual hardware does; Linux maintains old drivers for a longer time; Linux is less resource intensive</li>
+				<li><u>Software Availability</u>: there are many desktop apps that are available for Windows but not Linux; on the server side, the situation is reversed (cf. Apache web server)</li>
+				<li><u>User Interfaces</u>: Windows has its own interface, making it less portable</li>
+				<li><u>Configurability</u>: Linux is much more configurable</li>
+				<li><u>Security</u>: both of these OSs claim to be more secure than the other, depends on how you are looking at security; most viruses are designed for Windows, so they are essentially a non-issue with Linux though</li>
+			</ul>
+		</p>
+		<p>Linux is less popular on desktops (and its apps), but dominates the server market</p>
 
+		<h2 class="blue">What is a Distribution?</h2>
+		<p>each distribution has a Linux kernel plus some utilities and configuration files</p>
+		<p>distributions can vary greatly one from the next</p>
+		<h3  class="blue">Creating a Complete Linux-Based Operating System</h3>
+		<ul class="list">
+			<li>Linux <u>kernels</u> are not exactly the same</li>
+			<li><u>core Unix tools</u> such as the GNU tool set, X Window System, and utilities to manage disks; most distributions have very similar tools, but they can vary in versions and patches</li>
+			<li><u>supplemental software</u> such as server programs, desktop environments (remember that this is the GUI that lays on top of X; ie NOT the text-mode shell), productivity tools</li>
+			<li>the way a distribution manages its startup process contributes greatly to the "flavor" of the distribution; these startup processes are done by way of <u>startup scripts</u></li>
+			<li>depending on the distribution, the software <u>installer</u> may be quite different</li>
+		</ul>
+		<h3 class="blue">A Summary of Common Linux Distributions</h3>
+		<p>there are about a dozen major desktop distributions and hundreds more with specialized purposes</p>
+		<p>most distributions are free, but enterprise distributions often cost money and come with support</p>
+		<p>a shorter release cycle generally means mnore up-to-date software; longer release cycles aim to be more stable</p>
+		<p>some non-PC distributions:
+			<ul class="list">
+				<li>Android: cell phones, some e-readers</li>
+				<li>Network appliances: broadband routers, print servers; <span class="eg">egs: Tomato, OpenWrt</span></li>
+				<li>TiVO</li>
+				<li>Parted Magic: a distribution intended for emergency recovery operations</li>
+			</ul>
+		</p>
+		<p>Network appliances and TiVO are examples of embedded distributions</p>
+		<h3 class="blue">Understanding Release Cycles</h3>
+		<p>after its release, a distribution is typically supported until some time after the next version's release (usually a few months to a year or more), during which the maintainers provide updates and bug fixes</p>
+		<p>after the support period ends, you'll have to do those fixes yourself, so it's generally a good idea to upgrade to the newest version</p>
+		<p>rolling release cycle: upgrades can occur in an ongoing manner, making it unnecessary to ever do a full upgrade; some of the specific upgrades can as a result be more intrusive however</p>
+		<p>there are two classifications of pre-release versions:
+			<ul class="list">
+				<li>Alpha software: extremely new, likely to contain bugs</li>
+				<li>Beta software: more stable than Alpha, but still likely to be buggy</li>
+			</ul>
+		</p>
+		<p>generally, unless you want to contribute to a distribution's development, don't use pre-release versions</p>
+	</div>
 
+	<div class="gold" "section">
+		<h2 class="gold">Choosing an Operating System</h2>
+		<p>it depends on your system and goals; it's best to plan first than to have to fix things later</p>
+		<p>do this by conducting a needs assessment and make sure you talk to a buncch of people about it; this author is a little crazy on theneeds assessment</p>
+		<h3 class="gold">Selecting a Distribution</h3>
+		<p>Some guiding questions:
+			<ul class="list">
+				<li>will the system function as a workstation or as a server?</li>
+				<li>does the distribution offer support? For corporate jobs, it's best to have a well-supported distribution</li>
+				<li>will the applications you need run onn the distribution?</li>
+			</ul>
+		</p>
+		<h3 class="gold">Verifying System Requirements and Hardware Compatibility</h3>
+		<p>make sure that Linux drivers exist for all of your devices</p>
+		<p>distributions will have hardware compatibility lists (<span class="acro">HCL</span>s) where you can search for your system hardware to double check that it is covered; find the HCL on the distribution's website <span class="note">note: some distribbutions don't have HCLs</span></p>
+		<p>make sure that your hardware has enough memory, disk space, and processing power for the distribution you want</p>
+		<p>the distribution version you get must match your PC's architecture (<span class="eg">eg: x86, Alpha)</span></p>
+
+		<h2 class="gold">Common Linux Implementations</h2>
+		<p>common uses: desktop, server, embedded firmware, for virtualization, with cloud computing</p>
+		<h3 class="gold">Desktop</h3>
+		<p>two main reasons why Linux as a desktop has been unpopular:
+			<ol class="list">
+				<li>until recently, productivity apps (like spreadsheets, word processors) haven't been developed for desktop versions of Linux</li>
+				<li>many people are intimidated by Linux</li>
+			</ol>
+		</p>
+		<p>popular desktop distributions: Ubuntu, openSUSE, Fedora</p>
+		<h3 class="gold">Server</h3>
+		<p>Linux is more popular as a server</p>
+		<p>it is used as a file server, print server, database server, web server, email server</p>
+		<p>it's extremely stable, rarely crashes; very fast; less expensive</p>
+		<h3 class="gold">For Virtualization</h3>
+		<p>traditionally, one OS is installed on one device, which has full reign over all resources on the server hardware succh as RAM, processor time, storage devices, and network interfaces</p>
+		<p>however, the OS doesn't fully utilize all of these resources all of the time - this means there are wasted resources; usually each resource is at about 8-9% usage capacity</p>
+		<p>virtualization pools multiple OS instances onto the same physical hardware and lets them run concurrently, thus making the use of the hardware more efficcient</p>
+		<p>to do this, virtualization uses a <u>hypervisor</u> to manage access to system resources</p>
+		<p>virtualization allows multiple platforms to run at the same time on the same hardware</p>
+		<p>virtualization is a key component of cloud computing</p>
 	</div>
 
 </body>

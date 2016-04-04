@@ -16,8 +16,9 @@ p {
 }
 
 #header {
-	margin: 5%;
-	padding: 2%;
+	margin: 0;
+	padding: 5% 15%;
+	background-color: #DEDCDC;
 }
 
 #header-text {
@@ -27,8 +28,8 @@ p {
 
 /*topic*/
 .topic {
-	margin: 1% 10% 1% 10%;
-	padding-top: .5%;
+	margin: 0% 12%;
+	padding-top: 0%;
 	padding-bottom: .5%;
 }
 
@@ -38,19 +39,28 @@ p {
 }
 
 /*body*/
+body {
+	margin: 0;
+}
+
 div {
-	margin: 2% 12% 2% 12%;
+	margin: 0% 12%;
 	background-color: #B9B8B8;
 	padding: .5% 2% .5% 2%;
-	border-style: outset;
+}
+
+div.section {
+	border-style: solid;
+	border-width: 13px;
+	padding: .5% 9%;
 }
 
 div.gold {
-    border-color: darkgoldenrod;
+    border-color: #B9A36E;
 }
 
 div.blue {
-    border-color: #2A3CA0;
+    border-color: #6A75AD;
 }
 
 h2 {
@@ -68,5 +78,4 @@ h3 {
 .list {
 	margin-top: 0;
 	margin-bottom: 0;
-	background-color: #B9B8B8d;
 }

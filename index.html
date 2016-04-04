@@ -10,15 +10,17 @@
 <body>
 	<div id="header">
 		<h1 id="title">LPI's Linux Essentials Certificate Study Notes</h1>
-		<p id="header-text">Preparation for the exam I'm taking on June 4, 2016. The Gold book is the All-in-One and the Blue book is Roderick Smith's Linux Essentials.</p>
+		<p id="header-text">Preparation for the exam I'm taking on June 4, 2016. The Gold book is the All-in-One Exam Guide by Robb Tracy and the Blue book is Linux Essentials  by Roderick W. Smith.</p>
 	</div>
 
+<!-- ----------------------------------------------------Topic-------------------------------------------------------------------------------------- -->
 	<div class="topic">
 		<h1 class="topic-name">Topic 1</h1>
 	</div>
 
-	<div class="gold" "section">
-		<h2 class="gold" "first">Intro to Linux</h2>
+<!-- ----------------------------------------------------Gold Book Chapter 1------------------------------------------------------------------------ -->
+	<div class="section gold">
+		<h2 class="gold first">Intro to Linux</h2>
 		<ul class="list">
   			<li>Linux was first on the scene in the early 1990s</li>
   			<li>Considered experimental</li>
@@ -90,9 +92,10 @@
 		<p>It's possible (and probable) that newer versions of a particular distribution will come out before the first version is retired. Cool. The different versions will be at different stages of the support life cycle,, though.</p>
 	</div>
 
-	<div class="blue" "section">
-		<h2 class="blue" "first">Selecting an Operating System</h2>
-		<h3 class="blue">What is an Operating System?</h3>
+<!-- ----------------------------------------------------Blue Book Chapter 1------------------------------------------------------------------------ -->
+	<div class="blue section">
+		<h2 class="blue first">Selecting an Operating System</h2>
+		<h2 class="blue">What is an Operating System?</h2>
 		<p>provides all the most fundamental features of a computer, software-wise</p>
 		<p>enables the use of hardware devices, defines user interface standards, provides basic tools</p>
 
@@ -219,8 +222,9 @@
 		<p>generally, unless you want to contribute to a distribution's development, don't use pre-release versions</p>
 	</div>
 
-	<div class="gold" "section">
-		<h2 class="gold">Choosing an Operating System</h2>
+<!-- ----------------------------------------------------Gold Book Chapter 1------------------------------------------------------------------------ -->
+	<div class="section gold">
+		<h2 class="gold first">Choosing an Operating System</h2>
 		<p>it depends on your system and goals; it's best to plan first than to have to fix things later</p>
 		<p>do this by conducting a needs assessment and make sure you talk to a buncch of people about it; this author is a little crazy on theneeds assessment</p>
 		<h3 class="gold">Selecting a Distribution</h3>
@@ -258,6 +262,80 @@
 		<p>to do this, virtualization uses a <u>hypervisor</u> to manage access to system resources</p>
 		<p>virtualization allows multiple platforms to run at the same time on the same hardware</p>
 		<p>virtualization is a key component of cloud computing</p>
+	</div>
+
+<!-- ----------------------------------------------------Blue Book Chapter 2------------------------------------------------------------------------ -->
+	<div class="blue section">
+		<h2 class="blue first">Investigating Linux's Principles and Philosophy</h2>
+		<h2 class="blue">Linux Through the Ages</h2>
+		<h3 class="blue">Understanding Linux's Origins</h3>
+		<p>in 1991, the PC marketplace consisted mostly of x86-based computers (though Macs were available)</p>
+		<p>most ran MS-<span class="acro">DOS</span> (disk operating system), PC-DOS, or DOS
+			<ul class="list">
+				<li>extremely limited</li>
+				<li>MS Windows ran on top of DOS</li>
+				<li>DOS kernel did not totally control all programs (ie couldn't force a program to relinquish CPU resources)</li>
+			</ul>
+		</p>
+		<p>Unix was also popular - it was more sophisticated than the DOS/Wondows combo</p>
+		<p>in 1969, it was illegal for a phone company like AT&ampT to sell software, so when it developed Unix, AT&ampTgave it away to whoever wanted it</p>
+		<h3 class="blue">Seeing Today's Linux World</h3>
+		<p>changes to Linux since the 1990s include:
+			<ul class="list">
+				<li><u>kernel improvements</u>: networking features, hardware drivers, power management feattures</li>
+				<li><u>support tools improvements</u>: on the compilers, shells, GUIs, etc.</li>
+				<li><u>new support tools</u></li>
+				<li><u>new distributions</u></li>
+			</ul>
+		</p>
+
+		<h2 class="blue">Using Open Source Software</h2>
+		<h3 class="blue">Understanding Basic Open Source Principles (4 basic types)</h3>
+		<ol class="list">
+			<li><u>Commercial software</u>: the intention with commercial software is to make a profit; the source code is generally kept secret; redistribution is generally illegal</li>
+			<li><u>Shareware software</u>: similar to commercial software in that it's copyrighted and the author asks for payment, but shareware is sold on an honor system; like Sublime Text</li>
+			<li><u>Freeware</u>: available for free, authors don't ask for payment; generally comes without source code</li>
+			<li><u>Open source software</u>: there are ten principles that define open source; some main ones: the right of the user to redistribute the program, the right of the user to make and distribute changed versions of the program; source code is available</li>
+		</ol>
+		<p>there are hybrids of each of these types</p>
+		<h3 class="blue">Arguments for (and Against) Open Source:</h3>
+		<ul>
+			<li><u>better code</u>: the code can be peer-reviewed, bugs fixed, improvements made; not all projects are treated equally/give equal attention</li>
+			<li><u>more flexibility</u>: users are able to customize to their hearts' content and can release these new changes into the community so that others might also benefit</li>
+			<li><u>lower cost</u>: free!</li>
+			<li><u>lack of vendor lock-in</u>: can be modified to fit any standards</li>
+		</ul>
+		<p>the downsides are generally regarded as minor compared to the advantages</p>
+		<h3 class="blue">Linux as a Software Integrator</h3>
+		<p>Linux acts as a sort of "magnet" for software from many different places to congregate</p>
+
+		<h2 class="blue">Understanding OS Roles</h2>
+		<p>three basic roles Linux is useful for:
+			<ol class="list">
+				<li>Embedded Computers: these are specialized devices that fulfill a specfic purpose
+					<ul class="nested-list">
+						<li>cell phones - Android</li>
+						<li>e-readers - custom Linux or Android</li>
+						<li>DVRs - Linux</li>
+						<li>car computers - for GPS, radio, internet, engine monitor and control</li>
+						<li>appliances - TVs, fridges</li>
+						<li>embedded devices are designed to be used and not maintained by the end user</li>
+					</ul>
+				</li>
+				<li>Desktop and Laptop Computers: similar to workstations, though workstations tend to be more powerful and specialized
+					<ul class="nested-list">
+						<li>open source GUI apps tend to lag behind commercial ones because techies lack incentive on their off time to make apps that work more user-friendly (cf. the monetary incentives for commercial developers)</li>
+					</ul>
+				</li>
+				<li>Server Computers: servers can use the same hardware as desktops, though it is common to have larger hard disks and better network connections
+					<ul class="nested-list">
+						<li>most do not require a GUI: so servers do without X, desktop environments, or typical desktop programs</li>
+						<li>those who maintain large servers are usually very technically proficient and can contribute directly to the open source server projects that they use</li>
+					</ul>
+				</li>
+			</ol>
+		</p>
+
 	</div>
 
 </body>

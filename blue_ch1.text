@@ -1,0 +1,128 @@
+<div class="blue section" id="blue-ch1"> 
+	<h2 class="blue first">Selecting an Operating System</h2>
+	<h2 class="blue">What is an Operating System?</h2>
+	<p>provides all the most fundamental features of a computer, software-wise</p>
+	<p>enables the use of hardware devices, defines user interface standards, provides basic tools</p>
+
+	<h3 class="blue">What is a Kernel?</h3>
+	<p>a software compoment responsible for managing low-level features:
+		<ul class="list">
+			<li>interfacing with hardware devices</li>
+			<li>allocating memory to programs</li>
+			<li>allocating CPU time to programs</li>
+			<li>enabling programs to interact with each other</li>
+		</ul>
+	</p>
+	<p>the kernel is the basis; other programs run on top of it</p>
+	<p>the kernel is the software "glue" that holds the computer together</p>
+	<p>kernels are not interchangeable: they have different internal designs, provide different software interfaces</p>
+	<p>the Linux kernel is called Linux (technically Linux <em>only</em> refers to the kernel</p>
+	<h3 class="blue">What Else Identifies an Operating System?</h3>
+	<ul class="list">
+		<li>Command line shells: <span class="eg">eg Bourne again shell (<span class="acro">bash</span>)</span></li>
+		<li>GUI</li>
+		<li>Utility programs: <span class="eg">egs: calendars, calculators, text editors, disk maintenance tools, etc.</span></li>
+		<li>Libraries: provide critical services to programs; collections of programming functions that can be used by many different programs; <span class="eg">eg: libc</span></li>
+		<li>Productivity programs: web browsers, word processors, etc</li>
+	</ul>
+	<p>Operating systems can be distinguished also by details of user accounts, rules for naming disc files, details of the computer's start up</p>
+	<ul class="list">
+		<li>these details are sometimes controlled by the kernel, sometimes not</li>
+	</ul>
+
+	<h2 class="blue">Investigating User Interfaces</h2>
+	<p>Most operating systems have GUIs, but Linux is still largely text-oriented</p>
+	<h3 class="blue">Using a Text-Mode Interface</h3>
+	<p>Linux computers used to load to a text login screen, which included the OS name and version, the computer's name, the name of the hardware device being used for login, and the login prompt</p>
+	<p>$ - regular prompt</p>
+	<p># - root prompt</p>
+	<p>it's always possible to use a text-mode shell in a GUI: this window is called a terminal</p>
+	<h3 classs="blue">Using a Graphical User Interface</h3>
+	<span class="eg">GUI egs: GNOME, KDE, Xfce, Unity</span>
+	<p>GUI features:
+		<ul class="list">
+			<li><u>Program Launchers</u>: by selecting from menus, lists, or icons</li>
+			<li><u>File Managers</u>: to navigate directories</li>
+			<li><u>Window Controls</u>: windows are clickable, draggable, resizeable</li>
+			<li><u>Multiple Desktops</u>: can switch among virtual desktops</li>
+			<li><u>Logout Options</u>: log out, shut down, or log in as another user</li>
+		</ul>
+	</p>
+	<p>GUIs can be changed or swapped out</p>
+
+	<h2 class="blue">Where does Linux fit in the OS World?</h2>
+	<p>as compared to Unix, Mac OS X, and MS Windows?</p>
+	<p><span class="note">note: Linux can be considered a family of operating systems</span></p>
+	<h3 class="blue">Comparing Linux to Unix</h3>
+	<p>Linux is modeled after Unix</p>
+	<p>Unix was created in 1969 at AT&ampT's Bell Labs</p>
+	<p>some open source projects that were cloned from or made for Unix include:
+		<ul class="list">
+			<li>the linux kernel: designed to be compatible with other Unix kernels</li>
+			<li>the GNU project: an effort by the Free Software Foundation (<span class="acro">FSF</span>) to make open source versions of core Unix elements <span class="note">note: GNU HURD is a kernel, but it's not as popular as Linux</span></li>
+			<li>Xorg-X11: a GUI environment for most Unix OSs</li>
+			<li>desktop environments: such as GNOME, KDE, Xfce - same as Linux OSs</li>
+			<li>server programs: Unix and Linux are both popular as server OSs - for web servers, email servers, file servers, etc.</li>
+			<li>user productivity programs: similar or the same as those in Linux OSs, but more available to Linux</li>
+		</ul>
+	</p>
+	<p>Linux is most similar to Unix than other OSs</p>
+	<h3 class="blue">Comparing Linux to Mac OS X (the 'X' here is the Roman numeral ten)</h3>
+	<p>Mac OS X is a commercial Unix-based OS that discards Unix's GUI (ie: X) and uses its own</p>
+	<p>many text commands are shared or can be installed on Mac</p>
+	<p>its GUI is called Cocoa to programmers and Aqua to users</p>
+	<p>it's not easy to get Cocoa programs to run on Linux (maybe even impossible), BUT Linux programs can work in Cocoa (however, their appearance tends to get a little scrambled in Aqua)</p>
+	<p>installing OSX on non Apple hardwdare is pointless -- it's extremely difficult, plus Apple legally forbids it</p>
+	<p>iOS is a variant that is equally non-portable</p>
+	<p>Linux can be installed on Apple hardware though</p>
+	<h3 class="blue">Comparing Linux to Windows</h3>
+	<p>this is the most likely comparison</p>
+	<p>they have similar capabilities, but the details are significantly different:
+		<ul class="list">
+			<li><u>Licensing</u>: Linux is open source; Windows is proprietary</li>
+			<li><u>Costs</u>: many Linux distributions cost nothing, but it takes effort to maintain and install them</li>
+			<li><u>Hardware Compatibility</u>: most hardware manufacturers provide drivers for Windows; Linux drivers may take a few weeks, months, or years to appear after the actual hardware does; Linux maintains old drivers for a longer time; Linux is less resource intensive</li>
+			<li><u>Software Availability</u>: there are many desktop apps that are available for Windows but not Linux; on the server side, the situation is reversed (cf. Apache web server)</li>
+			<li><u>User Interfaces</u>: Windows has its own interface, making it less portable</li>
+			<li><u>Configurability</u>: Linux is much more configurable</li>
+			<li><u>Security</u>: both of these OSs claim to be more secure than the other, depends on how you are looking at security; most viruses are designed for Windows, so they are essentially a non-issue with Linux though</li>
+		</ul>
+	</p>
+	<p>Linux is less popular on desktops (and its apps), but dominates the server market</p>
+
+	<h2 class="blue">What is a Distribution?</h2>
+	<p>each distribution has a Linux kernel plus some utilities and configuration files</p>
+	<p>distributions can vary greatly one from the next</p>
+	<h3  class="blue">Creating a Complete Linux-Based Operating System</h3>
+	<ul class="list">
+		<li>Linux <u>kernels</u> are not exactly the same</li>
+		<li><u>core Unix tools</u> such as the GNU tool set, X Window System, and utilities to manage disks; most distributions have very similar tools, but they can vary in versions and patches</li>
+		<li><u>supplemental software</u> such as server programs, desktop environments (remember that this is the GUI that lays on top of X; ie NOT the text-mode shell), productivity tools</li>
+		<li>the way a distribution manages its startup process contributes greatly to the "flavor" of the distribution; these startup processes are done by way of <u>startup scripts</u></li>
+		<li>depending on the distribution, the software <u>installer</u> may be quite different</li>
+	</ul>
+	<h3 class="blue">A Summary of Common Linux Distributions</h3>
+	<p>there are about a dozen major desktop distributions and hundreds more with specialized purposes</p>
+	<p>most distributions are free, but enterprise distributions often cost money and come with support</p>
+	<p>a shorter release cycle generally means mnore up-to-date software; longer release cycles aim to be more stable</p>
+	<p>some non-PC distributions:
+		<ul class="list">
+			<li>Android: cell phones, some e-readers</li>
+			<li>Network appliances: broadband routers, print servers; <span class="eg">egs: Tomato, OpenWrt</span></li>
+			<li>TiVO</li>
+			<li>Parted Magic: a distribution intended for emergency recovery operations</li>
+		</ul>
+	</p>
+	<p>Network appliances and TiVO are examples of embedded distributions</p>
+	<h3 class="blue">Understanding Release Cycles</h3>
+	<p>after its release, a distribution is typically supported until some time after the next version's release (usually a few months to a year or more), during which the maintainers provide updates and bug fixes</p>
+	<p>after the support period ends, you'll have to do those fixes yourself, so it's generally a good idea to upgrade to the newest version</p>
+	<p>rolling release cycle: upgrades can occur in an ongoing manner, making it unnecessary to ever do a full upgrade; some of the specific upgrades can as a result be more intrusive however</p>
+	<p>there are two classifications of pre-release versions:
+		<ul class="list">
+			<li>Alpha software: extremely new, likely to contain bugs</li>
+			<li>Beta software: more stable than Alpha, but still likely to be buggy</li>
+		</ul>
+	</p>
+	<p>generally, unless you want to contribute to a distribution's development, don't use pre-release versions</p>
+</div>

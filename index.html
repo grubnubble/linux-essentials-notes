@@ -4,7 +4,17 @@
 	This will allow the browser to display certain characters (such as non-Roman letters) correctly.
 	You should include this line in the head of all of your webpages. -->
 	<title>Linux Essentials Notes</title> <!-- This is the title of your page (what appears in the name of a browser tab) -->
-	<link rel="stylesheet" type="text/css" href="style.css"> <!-- This line links your CSS stylesheet to your HTML (see Lesson 1.3) -->
+	<link rel="stylesheet" type="text/css" href="style.css"> <!-- This line links your CSS stylesheet to your HTML -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> <!-- loads jQuery -->
+
+	<!-- anonymous functions that load the text for the chapters via jQuery -->
+	<script> 
+		$(function(){
+  			$("#gch1").load("gold_ch1.text");
+  			$("#bch1").load("blue_ch1.text");
+  			$("#bch2").load("blue_ch2.text");
+		});
+	 </script>
 </head>
 
 <body>
@@ -12,328 +22,40 @@
 		<h1 id="title">LPI's Linux Essentials Certificate Study Notes</h1>
 		<p id="header-text">Preparation for the exam I'm taking on June 4, 2016. The Gold book is the All-in-One Exam Guide by Robb Tracy and the Blue book is Linux Essentials  by Roderick W. Smith.</p>
 	</div>
+	<div id="nav">
+		<ul id="toc">
+			<li><a href="#topic1">Topic 1</a></li>
+			<li><a href="#topic2">Topic 2</a></li>
+			<li><a href="#topic3">Topic 3</a></li>
+			<li><a href="#topic4">Topic 4</a></li>
+			<li><a href="#topic5">Topic 5</a></li>
+		</ul>
+	</div>
 
 <!-- ----------------------------------------------------Topic-------------------------------------------------------------------------------------- -->
-	<div class="topic">
+	<div class="topic" id="topic1">
 		<h1 class="topic-name">Topic 1</h1>
 	</div>
-
-<!-- ----------------------------------------------------Gold Book Chapter 1------------------------------------------------------------------------ -->
-	<div class="section gold"> <a id="gold-ch1"></a>
-		<h2 class="gold first">Intro to Linux</h2>
-		<ul class="list">
-  			<li>Linux was first on the scene in the early 1990s</li>
-  			<li>Considered experimental</li>
-  			<li>Now Linux is huge for servers and network services</li>
-  			<li>highly configurable</li>
-  			<li>also popular for desktop computers</li>
-		</ul>  
-
-		<h3 class="gold">Role of an Operating System (<span class="acro">OS</span>)</h3>
-		<p class="note">note: an operating system is not an application</p>
-		<p>OSs provide 5 key functions in a computer system:</p>
-		<ol class="list">
-			<li>provides an <u>application platform</u>; the OS manages applications' access to central processing unit (<span class"acro">CPU</span>) and system memory</li>
-			<li>serves as a <u>hardware moderator</u> to manage how applications use the computer's hardware
-				<p class="eg">eg: OS ensures that one application doesn't try to use memory that is already being used by another application</p>
-			</li>
-			<li>Uses a filesystem to provide efficient and reliable means for <u>data storage</u></li>
-			<li>provides <u>security</u> for its data, to varying degrees depending on the OS</li>
-			<li>manages <u>connectivity</u> to other devices</li>
-		</ol>
-		<p>The Linux Operating System is composed of:
-			<ul class="list">
-				<li><u>Linux kernel</u>: the actual OS itself, the heart of Linux</li>
-				<li><u>Libraries</u>: prewritten code elements that are shared with all applications</li>
-				<li><u>Utilities</u>: for completing OS management tasks
-					<p class="eg">egs: maintaining filesystem, editing text files, managing running processes, installing new packages</p>
-				</li>
-				<li><u>User Interface</u>: command line interface (<span class="acro">CLI</span>) and optional graphical user interface (<span class"acro">GUI</span></li>
-			</ul>
-		</p>
-
-		<h3 class="gold">How Linux Came to Be</h3>
-		<p>a grad student in Helsinki, Finland, named <span class="people">Linus Torvalds</span> developed the Linux kernel based on Minix</p>
-		<p>Minix was a clone of Unix; it was developed by <span class="people">Dr. Andrew S. Tanenbaum</span> so that he could teach his students about the inner workings ofo an OS; he wanted them to be able to see the source code; it was a minimal freeware OS</p>
-		<p>At the time, there were only three main OSs: DOS, Mac OS X, and Unix
-			<ul class="list">
-				<li>all three were commercially developed, protected by patents and copyrights</li>
-				<li>it was not possible to reverse-compile these OSs (<u>reverse-compiling</u> is a process of generating source code, given a binary program file. There are applications that can do this.)</li>
-			</ul>
-		</p>
-		<p>in 1991, Torvalds cloned Unix and created Linux. It consisted only of the Linux kernel and three utilities: Bourne again shell <span class="acro">bash</span> (commandd line interface), update (for flushing file buffers, whatever that means), and gcc (a C++ compiler)</p>
-		<p>Torvalds posted the source code and invited programmers to improve it</p>
-
-		<h3 class="gold">GNU and Linux</h3>
-		<p>The GNU's Not Linux (<span class="acro">GNU</span>) movement:
-			<ul class="list">
-				<li>in the 1980s, Rishard Stallman of MIT objected the to proprietary nature of the corporate software development model</li>
-				<li>the idea is that the source code should be freely distributable in order to encourage developers to make improvements to it</li>
-				<li>gcc was developed under GNU</li>
-			</ul>
-		</p>
-		<p>Linux is licensed under GNU General Public License (<span class="acro">GPL</span>) so that anyone can use, modify, or distribute its source code</p>
-
-		<h3 class="gold">Distributions</h3>
-		<p>take your basic Linux  OS recipe (ie the source code for the kernel) and add some things (namely tools, utilities, applications) to get different flavors of Linux</p>
-		<p>Linux is unique in the OS world for having so many distributions developed by many different people and companies</p>
-		<p>there are hundreds of Linux distributions; most are free but some must be paid for</p>
-
-		<h3 class="gold">Life Cycle of a Linux Distribution</h3>
-		<p>essentially the same life cycle as any other software:
-			<ol class="list">
-				<li><u>Design</u>: the goal or purpose of pthe distribution is identified</li>
-				<li><u>Develop</u>: the distribution is created according to the plans made in the design phase; usually debugged</li>
-				<li><u>Deploy</u>: the completed distribution is released</li>
-				<li><u>Manage</u>: bugs are identified; updates are made to fix them every few months</li>
-				<li><u>Retire</u>: after support is pulled (ie: after the end of the suppor life cycle), the distribution is obsolete and is retired</li>
-			</ol>
-		</p>
-		<p>It's possible (and probable) that newer versions of a particular distribution will come out before the first version is retired. Cool. The different versions will be at different stages of the support life cycle,, though.</p>
-		
-		<h2 class="gold">Choosing an Operating System</h2>
-		<p>it depends on your system and goals; it's best to plan first than to have to fix things later</p>
-		<p>do this by conducting a needs assessment and make sure you talk to a buncch of people about it; this author is a little crazy on theneeds assessment</p>
-		<h3 class="gold">Selecting a Distribution</h3>
-		<p>Some guiding questions:
-			<ul class="list">
-				<li>will the system function as a workstation or as a server?</li>
-				<li>does the distribution offer support? For corporate jobs, it's best to have a well-supported distribution</li>
-				<li>will the applications you need run onn the distribution?</li>
-			</ul>
-		</p>
-		<h3 class="gold">Verifying System Requirements and Hardware Compatibility</h3>
-		<p>make sure that Linux drivers exist for all of your devices</p>
-		<p>distributions will have hardware compatibility lists (<span class="acro">HCL</span>s) where you can search for your system hardware to double check that it is covered; find the HCL on the distribution's website <span class="note">note: some distribbutions don't have HCLs</span></p>
-		<p>make sure that your hardware has enough memory, disk space, and processing power for the distribution you want</p>
-		<p>the distribution version you get must match your PC's architecture (<span class="eg">eg: x86, Alpha)</span></p>
-
-		<h2 class="gold">Common Linux Implementations</h2>
-		<p>common uses: desktop, server, embedded firmware, for virtualization, with cloud computing</p>
-		<h3 class="gold">Desktop</h3>
-		<p>two main reasons why Linux as a desktop has been unpopular:
-			<ol class="list">
-				<li>until recently, productivity apps (like spreadsheets, word processors) haven't been developed for desktop versions of Linux</li>
-				<li>many people are intimidated by Linux</li>
-			</ol>
-		</p>
-		<p>popular desktop distributions: Ubuntu, openSUSE, Fedora</p>
-		<h3 class="gold">Server</h3>
-		<p>Linux is more popular as a server</p>
-		<p>it is used as a file server, print server, database server, web server, email server</p>
-		<p>it's extremely stable, rarely crashes; very fast; less expensive</p>
-		<h3 class="gold">For Virtualization</h3>
-		<p>traditionally, one OS is installed on one device, which has full reign over all resources on the server hardware succh as RAM, processor time, storage devices, and network interfaces</p>
-		<p>however, the OS doesn't fully utilize all of these resources all of the time - this means there are wasted resources; usually each resource is at about 8-9% usage capacity</p>
-		<p>virtualization pools multiple OS instances onto the same physical hardware and lets them run concurrently, thus making the use of the hardware more efficcient</p>
-		<p>to do this, virtualization uses a <u>hypervisor</u> to manage access to system resources</p>
-		<p>virtualization allows multiple platforms to run at the same time on the same hardware</p>
-		<p>virtualization is a key component of cloud computing</p>
+	<div id="nav">
+		<ul id="toc">
+			<li><a href="#gold-ch1">Gold Book Chapter 1</a></li>
+			<li><a href="#blue-ch1">Blue Book Chapter 1</a></li>
+			<li><a href="#blue-ch2">Blue Book Chapter 2</a></li>
+			<li><a href="#gold-ch2">Gold Book Chapter 2</a></li>
+			<li><a href="#blue-ch4">Blue Book Chapter 4</a></li>
+			<li><a href="#gold-ch4">Gold Book Chapter 4</a></li>
+			<li><a href="#blue-ch3">Blue Book Chapter 3</a></li>
+		</ul>
 	</div>
 
-<!-- ----------------------------------------------------Blue Book Chapter 1------------------------------------------------------------------------ -->
-	<div class="blue section"> <a id="blue-ch1"></a>
-		<h2 class="blue first">Selecting an Operating System</h2>
-		<h2 class="blue">What is an Operating System?</h2>
-		<p>provides all the most fundamental features of a computer, software-wise</p>
-		<p>enables the use of hardware devices, defines user interface standards, provides basic tools</p>
+<!-- loads the text for each of the chapters -->
+	<span id="gch1"></span>
+	<span id="bch1"></span>
+	<span id="bch2"></span>
 
-		<h3 class="blue">What is a Kernel?</h3>
-		<p>a software compoment responsible for managing low-level features:
-			<ul class="list">
-				<li>interfacing with hardware devices</li>
-				<li>allocating memory to programs</li>
-				<li>allocating CPU time to programs</li>
-				<li>enabling programs to interact with each other</li>
-			</ul>
-		</p>
-		<p>the kernel is the basis; other programs run on top of it</p>
-		<p>the kernel is the software "glue" that holds the computer together</p>
-		<p>kernels are not interchangeable: they have different internal designs, provide different software interfaces</p>
-		<p>the Linux kernel is called Linux (technically Linux <em>only</em> refers to the kernel</p>
-		<h3 class="blue">What Else Identifies an Operating System?</h3>
-		<ul class="list">
-			<li>Command line shells: <span class="eg">eg Bourne again shell (<span class="acro">bash</span>)</span></li>
-			<li>GUI</li>
-			<li>Utility programs: <span class="eg">egs: calendars, calculators, text editors, disk maintenance tools, etc.</span></li>
-			<li>Libraries: provide critical services to programs; collections of programming functions that can be used by many different programs; <span class="eg">eg: libc</span></li>
-			<li>Productivity programs: web browsers, word processors, etc</li>
-		</ul>
-		<p>Operating systems can be distinguished also by details of user accounts, rules for naming disc files, details of the computer's start up</p>
-		<ul class="list">
-			<li>these details are sometimes controlled by the kernel, sometimes not</li>
-		</ul>
 
-		<h2 class="blue">Investigating User Interfaces</h2>
-		<p>Most operating systems have GUIs, but Linux is still largely text-oriented</p>
-		<h3 class="blue">Using a Text-Mode Interface</h3>
-		<p>Linux computers used to load to a text login screen, which included the OS name and version, the computer's name, the name of the hardware device being used for login, and the login prompt</p>
-		<p>$ - regular prompt</p>
-		<p># - root prompt</p>
-		<p>it's always possible to use a text-mode shell in a GUI: this window is called a terminal</p>
-		<h3 classs="blue">Using a Graphical User Interface</h3>
-		<span class="eg">GUI egs: GNOME, KDE, Xfce, Unity</span>
-		<p>GUI features:
-			<ul class="list">
-				<li><u>Program Launchers</u>: by selecting from menus, lists, or icons</li>
-				<li><u>File Managers</u>: to navigate directories</li>
-				<li><u>Window Controls</u>: windows are clickable, draggable, resizeable</li>
-				<li><u>Multiple Desktops</u>: can switch among virtual desktops</li>
-				<li><u>Logout Options</u>: log out, shut down, or log in as another user</li>
-			</ul>
-		</p>
-		<p>GUIs can be changed or swapped out</p>
+<!-- ----------------------------------------------------working text------------------------------------------------------------------------------- -->
 
-		<h2 class="blue">Where does Linux fit in the OS World?</h2>
-		<p>as compared to Unix, Mac OS X, and MS Windows?</p>
-		<p><span class="note">note: Linux can be considered a family of operating systems</span></p>
-		<h3 class="blue">Comparing Linux to Unix</h3>
-		<p>Linux is modeled after Unix</p>
-		<p>Unix was created in 1969 at AT&ampT's Bell Labs</p>
-		<p>some open source projects that were cloned from or made for Unix include:
-			<ul class="list">
-				<li>the linux kernel: designed to be compatible with other Unix kernels</li>
-				<li>the GNU project: an effort by the Free Software Foundation (<span class="acro">FSF</span>) to make open source versions of core Unix elements <span class="note">note: GNU HURD is a kernel, but it's not as popular as Linux</span></li>
-				<li>Xorg-X11: a GUI environment for most Unix OSs</li>
-				<li>desktop environments: such as GNOME, KDE, Xfce - same as Linux OSs</li>
-				<li>server programs: Unix and Linux are both popular as server OSs - for web servers, email servers, file servers, etc.</li>
-				<li>user productivity programs: similar or the same as those in Linux OSs, but more available to Linux</li>
-			</ul>
-		</p>
-		<p>Linux is most similar to Unix than other OSs</p>
-		<h3 class="blue">Comparing Linux to Mac OS X (the 'X' here is the Roman numeral ten)</h3>
-		<p>Mac OS X is a commercial Unix-based OS that discards Unix's GUI (ie: X) and uses its own</p>
-		<p>many text commands are shared or can be installed on Mac</p>
-		<p>its GUI is called Cocoa to programmers and Aqua to users</p>
-		<p>it's not easy to get Cocoa programs to run on Linux (maybe even impossible), BUT Linux programs can work in Cocoa (however, their appearance tends to get a little scrambled in Aqua)</p>
-		<p>installing OSX on non Apple hardwdare is pointless -- it's extremely difficult, plus Apple legally forbids it</p>
-		<p>iOS is a variant that is equally non-portable</p>
-		<p>Linux can be installed on Apple hardware though</p>
-		<h3 class="blue">Comparing Linux to Windows</h3>
-		<p>this is the most likely comparison</p>
-		<p>they have similar capabilities, but the details are significantly different:
-			<ul class="list">
-				<li><u>Licensing</u>: Linux is open source; Windows is proprietary</li>
-				<li><u>Costs</u>: many Linux distributions cost nothing, but it takes effort to maintain and install them</li>
-				<li><u>Hardware Compatibility</u>: most hardware manufacturers provide drivers for Windows; Linux drivers may take a few weeks, months, or years to appear after the actual hardware does; Linux maintains old drivers for a longer time; Linux is less resource intensive</li>
-				<li><u>Software Availability</u>: there are many desktop apps that are available for Windows but not Linux; on the server side, the situation is reversed (cf. Apache web server)</li>
-				<li><u>User Interfaces</u>: Windows has its own interface, making it less portable</li>
-				<li><u>Configurability</u>: Linux is much more configurable</li>
-				<li><u>Security</u>: both of these OSs claim to be more secure than the other, depends on how you are looking at security; most viruses are designed for Windows, so they are essentially a non-issue with Linux though</li>
-			</ul>
-		</p>
-		<p>Linux is less popular on desktops (and its apps), but dominates the server market</p>
-
-		<h2 class="blue">What is a Distribution?</h2>
-		<p>each distribution has a Linux kernel plus some utilities and configuration files</p>
-		<p>distributions can vary greatly one from the next</p>
-		<h3  class="blue">Creating a Complete Linux-Based Operating System</h3>
-		<ul class="list">
-			<li>Linux <u>kernels</u> are not exactly the same</li>
-			<li><u>core Unix tools</u> such as the GNU tool set, X Window System, and utilities to manage disks; most distributions have very similar tools, but they can vary in versions and patches</li>
-			<li><u>supplemental software</u> such as server programs, desktop environments (remember that this is the GUI that lays on top of X; ie NOT the text-mode shell), productivity tools</li>
-			<li>the way a distribution manages its startup process contributes greatly to the "flavor" of the distribution; these startup processes are done by way of <u>startup scripts</u></li>
-			<li>depending on the distribution, the software <u>installer</u> may be quite different</li>
-		</ul>
-		<h3 class="blue">A Summary of Common Linux Distributions</h3>
-		<p>there are about a dozen major desktop distributions and hundreds more with specialized purposes</p>
-		<p>most distributions are free, but enterprise distributions often cost money and come with support</p>
-		<p>a shorter release cycle generally means mnore up-to-date software; longer release cycles aim to be more stable</p>
-		<p>some non-PC distributions:
-			<ul class="list">
-				<li>Android: cell phones, some e-readers</li>
-				<li>Network appliances: broadband routers, print servers; <span class="eg">egs: Tomato, OpenWrt</span></li>
-				<li>TiVO</li>
-				<li>Parted Magic: a distribution intended for emergency recovery operations</li>
-			</ul>
-		</p>
-		<p>Network appliances and TiVO are examples of embedded distributions</p>
-		<h3 class="blue">Understanding Release Cycles</h3>
-		<p>after its release, a distribution is typically supported until some time after the next version's release (usually a few months to a year or more), during which the maintainers provide updates and bug fixes</p>
-		<p>after the support period ends, you'll have to do those fixes yourself, so it's generally a good idea to upgrade to the newest version</p>
-		<p>rolling release cycle: upgrades can occur in an ongoing manner, making it unnecessary to ever do a full upgrade; some of the specific upgrades can as a result be more intrusive however</p>
-		<p>there are two classifications of pre-release versions:
-			<ul class="list">
-				<li>Alpha software: extremely new, likely to contain bugs</li>
-				<li>Beta software: more stable than Alpha, but still likely to be buggy</li>
-			</ul>
-		</p>
-		<p>generally, unless you want to contribute to a distribution's development, don't use pre-release versions</p>
-	</div>
-
-<!-- ----------------------------------------------------Blue Book Chapter 2------------------------------------------------------------------------ -->
-	<div class="blue section"> <a id="blue-ch2"></a>
-		<h2 class="blue first">Investigating Linux's Principles and Philosophy</h2>
-		<h2 class="blue">Linux Through the Ages</h2>
-		<h3 class="blue">Understanding Linux's Origins</h3>
-		<p>in 1991, the PC marketplace consisted mostly of x86-based computers (though Macs were available)</p>
-		<p>most ran MS-<span class="acro">DOS</span> (disk operating system), PC-DOS, or DOS
-			<ul class="list">
-				<li>extremely limited</li>
-				<li>MS Windows ran on top of DOS</li>
-				<li>DOS kernel did not totally control all programs (ie couldn't force a program to relinquish CPU resources)</li>
-			</ul>
-		</p>
-		<p>Unix was also popular - it was more sophisticated than the DOS/Wondows combo</p>
-		<p>in 1969, it was illegal for a phone company like AT&ampT to sell software, so when it developed Unix, AT&ampTgave it away to whoever wanted it</p>
-		<h3 class="blue">Seeing Today's Linux World</h3>
-		<p>changes to Linux since the 1990s include:
-			<ul class="list">
-				<li><u>kernel improvements</u>: networking features, hardware drivers, power management feattures</li>
-				<li><u>support tools improvements</u>: on the compilers, shells, GUIs, etc.</li>
-				<li><u>new support tools</u></li>
-				<li><u>new distributions</u></li>
-			</ul>
-		</p>
-
-		<h2 class="blue">Using Open Source Software</h2>
-		<h3 class="blue">Understanding Basic Open Source Principles (4 basic types)</h3>
-		<ol class="list">
-			<li><u>Commercial software</u>: the intention with commercial software is to make a profit; the source code is generally kept secret; redistribution is generally illegal</li>
-			<li><u>Shareware software</u>: similar to commercial software in that it's copyrighted and the author asks for payment, but shareware is sold on an honor system; like Sublime Text</li>
-			<li><u>Freeware</u>: available for free, authors don't ask for payment; generally comes without source code</li>
-			<li><u>Open source software</u>: there are ten principles that define open source; some main ones: the right of the user to redistribute the program, the right of the user to make and distribute changed versions of the program; source code is available</li>
-		</ol>
-		<p>there are hybrids of each of these types</p>
-		<h3 class="blue">Arguments for (and Against) Open Source:</h3>
-		<ul>
-			<li><u>better code</u>: the code can be peer-reviewed, bugs fixed, improvements made; not all projects are treated equally/give equal attention</li>
-			<li><u>more flexibility</u>: users are able to customize to their hearts' content and can release these new changes into the community so that others might also benefit</li>
-			<li><u>lower cost</u>: free!</li>
-			<li><u>lack of vendor lock-in</u>: can be modified to fit any standards</li>
-		</ul>
-		<p>the downsides are generally regarded as minor compared to the advantages</p>
-		<h3 class="blue">Linux as a Software Integrator</h3>
-		<p>Linux acts as a sort of "magnet" for software from many different places to congregate</p>
-
-		<h2 class="blue">Understanding OS Roles</h2>
-		<p>three basic roles Linux is useful for:
-			<ol class="list">
-				<li>Embedded Computers: these are specialized devices that fulfill a specfic purpose
-					<ul class="nested-list">
-						<li>cell phones - Android</li>
-						<li>e-readers - custom Linux or Android</li>
-						<li>DVRs - Linux</li>
-						<li>car computers - for GPS, radio, internet, engine monitor and control</li>
-						<li>appliances - TVs, fridges</li>
-						<li>embedded devices are designed to be used and not maintained by the end user</li>
-					</ul>
-				</li>
-				<li>Desktop and Laptop Computers: similar to workstations, though workstations tend to be more powerful and specialized
-					<ul class="nested-list">
-						<li>open source GUI apps tend to lag behind commercial ones because techies lack incentive on their off time to make apps that work more user-friendly (cf. the monetary incentives for commercial developers)</li>
-					</ul>
-				</li>
-				<li>Server Computers: servers can use the same hardware as desktops, though it is common to have larger hard disks and better network connections
-					<ul class="nested-list">
-						<li>most do not require a GUI: so servers do without X, desktop environments, or typical desktop programs</li>
-						<li>those who maintain large servers are usually very technically proficient and can contribute directly to the open source server projects that they use</li>
-					</ul>
-				</li>
-			</ol>
-		</p>
-
-	</div>
 
 </body>
 

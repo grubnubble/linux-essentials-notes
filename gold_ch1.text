@@ -1,0 +1,111 @@
+<div class="section gold" id="gold-ch1">
+	<h2 class="gold first">Intro to Linux</h2>
+	<ul class="list">
+			<li>Linux was first on the scene in the early 1990s</li>
+			<li>Considered experimental</li>
+			<li>Now Linux is huge for servers and network services</li>
+			<li>highly configurable</li>
+			<li>also popular for desktop computers</li>
+	</ul>  
+
+	<h3 class="gold">Role of an Operating System (<span class="acro">OS</span>)</h3>
+	<p class="note">note: an operating system is not an application</p>
+	<p>OSs provide 5 key functions in a computer system:</p>
+	<ol class="list">
+		<li>provides an <u>application platform</u>; the OS manages applications' access to central processing unit (<span class"acro">CPU</span>) and system memory</li>
+		<li>serves as a <u>hardware moderator</u> to manage how applications use the computer's hardware
+			<p class="eg">eg: OS ensures that one application doesn't try to use memory that is already being used by another application</p>
+		</li>
+		<li>Uses a filesystem to provide efficient and reliable means for <u>data storage</u></li>
+		<li>provides <u>security</u> for its data, to varying degrees depending on the OS</li>
+		<li>manages <u>connectivity</u> to other devices</li>
+	</ol>
+	<p>The Linux Operating System is composed of:
+		<ul class="list">
+			<li><u>Linux kernel</u>: the actual OS itself, the heart of Linux</li>
+			<li><u>Libraries</u>: prewritten code elements that are shared with all applications</li>
+			<li><u>Utilities</u>: for completing OS management tasks
+				<p class="eg">egs: maintaining filesystem, editing text files, managing running processes, installing new packages</p>
+			</li>
+			<li><u>User Interface</u>: command line interface (<span class="acro">CLI</span>) and optional graphical user interface (<span class"acro">GUI</span></li>
+		</ul>
+	</p>
+
+	<h3 class="gold">How Linux Came to Be</h3>
+	<p>a grad student in Helsinki, Finland, named <span class="people">Linus Torvalds</span> developed the Linux kernel based on Minix</p>
+	<p>Minix was a clone of Unix; it was developed by <span class="people">Dr. Andrew S. Tanenbaum</span> so that he could teach his students about the inner workings ofo an OS; he wanted them to be able to see the source code; it was a minimal freeware OS</p>
+	<p>At the time, there were only three main OSs: DOS, Mac OS X, and Unix
+		<ul class="list">
+			<li>all three were commercially developed, protected by patents and copyrights</li>
+			<li>it was not possible to reverse-compile these OSs (<u>reverse-compiling</u> is a process of generating source code, given a binary program file. There are applications that can do this.)</li>
+		</ul>
+	</p>
+	<p>in 1991, Torvalds cloned Unix and created Linux. It consisted only of the Linux kernel and three utilities: Bourne again shell <span class="acro">bash</span> (commandd line interface), update (for flushing file buffers, whatever that means), and gcc (a C++ compiler)</p>
+	<p>Torvalds posted the source code and invited programmers to improve it</p>
+
+	<h3 class="gold">GNU and Linux</h3>
+	<p>The GNU's Not Linux (<span class="acro">GNU</span>) movement:
+		<ul class="list">
+			<li>in the 1980s, Rishard Stallman of MIT objected the to proprietary nature of the corporate software development model</li>
+			<li>the idea is that the source code should be freely distributable in order to encourage developers to make improvements to it</li>
+			<li>gcc was developed under GNU</li>
+		</ul>
+	</p>
+	<p>Linux is licensed under GNU General Public License (<span class="acro">GPL</span>) so that anyone can use, modify, or distribute its source code</p>
+
+	<h3 class="gold">Distributions</h3>
+	<p>take your basic Linux  OS recipe (ie the source code for the kernel) and add some things (namely tools, utilities, applications) to get different flavors of Linux</p>
+	<p>Linux is unique in the OS world for having so many distributions developed by many different people and companies</p>
+	<p>there are hundreds of Linux distributions; most are free but some must be paid for</p>
+
+	<h3 class="gold">Life Cycle of a Linux Distribution</h3>
+	<p>essentially the same life cycle as any other software:
+		<ol class="list">
+			<li><u>Design</u>: the goal or purpose of pthe distribution is identified</li>
+			<li><u>Develop</u>: the distribution is created according to the plans made in the design phase; usually debugged</li>
+			<li><u>Deploy</u>: the completed distribution is released</li>
+			<li><u>Manage</u>: bugs are identified; updates are made to fix them every few months</li>
+			<li><u>Retire</u>: after support is pulled (ie: after the end of the suppor life cycle), the distribution is obsolete and is retired</li>
+		</ol>
+	</p>
+	<p>It's possible (and probable) that newer versions of a particular distribution will come out before the first version is retired. Cool. The different versions will be at different stages of the support life cycle,, though.</p>
+
+	<h2 class="gold">Choosing an Operating System</h2>
+	<p>it depends on your system and goals; it's best to plan first than to have to fix things later</p>
+	<p>do this by conducting a needs assessment and make sure you talk to a buncch of people about it; this author is a little crazy on theneeds assessment</p>
+	<h3 class="gold">Selecting a Distribution</h3>
+	<p>Some guiding questions:
+		<ul class="list">
+			<li>will the system function as a workstation or as a server?</li>
+			<li>does the distribution offer support? For corporate jobs, it's best to have a well-supported distribution</li>
+			<li>will the applications you need run onn the distribution?</li>
+		</ul>
+	</p>
+	<h3 class="gold">Verifying System Requirements and Hardware Compatibility</h3>
+	<p>make sure that Linux drivers exist for all of your devices</p>
+	<p>distributions will have hardware compatibility lists (<span class="acro">HCL</span>s) where you can search for your system hardware to double check that it is covered; find the HCL on the distribution's website <span class="note">note: some distribbutions don't have HCLs</span></p>
+	<p>make sure that your hardware has enough memory, disk space, and processing power for the distribution you want</p>
+	<p>the distribution version you get must match your PC's architecture (<span class="eg">eg: x86, Alpha)</span></p>
+
+	<h2 class="gold">Common Linux Implementations</h2>
+	<p>common uses: desktop, server, embedded firmware, for virtualization, with cloud computing</p>
+	<h3 class="gold">Desktop</h3>
+	<p>two main reasons why Linux as a desktop has been unpopular:
+		<ol class="list">
+			<li>until recently, productivity apps (like spreadsheets, word processors) haven't been developed for desktop versions of Linux</li>
+			<li>many people are intimidated by Linux</li>
+		</ol>
+	</p>
+	<p>popular desktop distributions: Ubuntu, openSUSE, Fedora</p>
+	<h3 class="gold">Server</h3>
+	<p>Linux is more popular as a server</p>
+	<p>it is used as a file server, print server, database server, web server, email server</p>
+	<p>it's extremely stable, rarely crashes; very fast; less expensive</p>
+	<h3 class="gold">For Virtualization</h3>
+	<p>traditionally, one OS is installed on one device, which has full reign over all resources on the server hardware succh as RAM, processor time, storage devices, and network interfaces</p>
+	<p>however, the OS doesn't fully utilize all of these resources all of the time - this means there are wasted resources; usually each resource is at about 8-9% usage capacity</p>
+	<p>virtualization pools multiple OS instances onto the same physical hardware and lets them run concurrently, thus making the use of the hardware more efficcient</p>
+	<p>to do this, virtualization uses a <u>hypervisor</u> to manage access to system resources</p>
+	<p>virtualization allows multiple platforms to run at the same time on the same hardware</p>
+	<p>virtualization is a key component of cloud computing</p>
+</div>

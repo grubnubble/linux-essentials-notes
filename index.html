@@ -19,7 +19,7 @@
 	</div>
 
 <!-- ----------------------------------------------------Gold Book Chapter 1------------------------------------------------------------------------ -->
-	<div class="section gold">
+	<div class="section gold"> <a id="gold-ch1"></a>
 		<h2 class="gold first">Intro to Linux</h2>
 		<ul class="list">
   			<li>Linux was first on the scene in the early 1990s</li>
@@ -90,10 +90,49 @@
 			</ol>
 		</p>
 		<p>It's possible (and probable) that newer versions of a particular distribution will come out before the first version is retired. Cool. The different versions will be at different stages of the support life cycle,, though.</p>
+		
+		<h2 class="gold">Choosing an Operating System</h2>
+		<p>it depends on your system and goals; it's best to plan first than to have to fix things later</p>
+		<p>do this by conducting a needs assessment and make sure you talk to a buncch of people about it; this author is a little crazy on theneeds assessment</p>
+		<h3 class="gold">Selecting a Distribution</h3>
+		<p>Some guiding questions:
+			<ul class="list">
+				<li>will the system function as a workstation or as a server?</li>
+				<li>does the distribution offer support? For corporate jobs, it's best to have a well-supported distribution</li>
+				<li>will the applications you need run onn the distribution?</li>
+			</ul>
+		</p>
+		<h3 class="gold">Verifying System Requirements and Hardware Compatibility</h3>
+		<p>make sure that Linux drivers exist for all of your devices</p>
+		<p>distributions will have hardware compatibility lists (<span class="acro">HCL</span>s) where you can search for your system hardware to double check that it is covered; find the HCL on the distribution's website <span class="note">note: some distribbutions don't have HCLs</span></p>
+		<p>make sure that your hardware has enough memory, disk space, and processing power for the distribution you want</p>
+		<p>the distribution version you get must match your PC's architecture (<span class="eg">eg: x86, Alpha)</span></p>
+
+		<h2 class="gold">Common Linux Implementations</h2>
+		<p>common uses: desktop, server, embedded firmware, for virtualization, with cloud computing</p>
+		<h3 class="gold">Desktop</h3>
+		<p>two main reasons why Linux as a desktop has been unpopular:
+			<ol class="list">
+				<li>until recently, productivity apps (like spreadsheets, word processors) haven't been developed for desktop versions of Linux</li>
+				<li>many people are intimidated by Linux</li>
+			</ol>
+		</p>
+		<p>popular desktop distributions: Ubuntu, openSUSE, Fedora</p>
+		<h3 class="gold">Server</h3>
+		<p>Linux is more popular as a server</p>
+		<p>it is used as a file server, print server, database server, web server, email server</p>
+		<p>it's extremely stable, rarely crashes; very fast; less expensive</p>
+		<h3 class="gold">For Virtualization</h3>
+		<p>traditionally, one OS is installed on one device, which has full reign over all resources on the server hardware succh as RAM, processor time, storage devices, and network interfaces</p>
+		<p>however, the OS doesn't fully utilize all of these resources all of the time - this means there are wasted resources; usually each resource is at about 8-9% usage capacity</p>
+		<p>virtualization pools multiple OS instances onto the same physical hardware and lets them run concurrently, thus making the use of the hardware more efficcient</p>
+		<p>to do this, virtualization uses a <u>hypervisor</u> to manage access to system resources</p>
+		<p>virtualization allows multiple platforms to run at the same time on the same hardware</p>
+		<p>virtualization is a key component of cloud computing</p>
 	</div>
 
 <!-- ----------------------------------------------------Blue Book Chapter 1------------------------------------------------------------------------ -->
-	<div class="blue section">
+	<div class="blue section"> <a id="blue-ch1"></a>
 		<h2 class="blue first">Selecting an Operating System</h2>
 		<h2 class="blue">What is an Operating System?</h2>
 		<p>provides all the most fundamental features of a computer, software-wise</p>
@@ -222,50 +261,8 @@
 		<p>generally, unless you want to contribute to a distribution's development, don't use pre-release versions</p>
 	</div>
 
-<!-- ----------------------------------------------------Gold Book Chapter 1------------------------------------------------------------------------ -->
-	<div class="section gold">
-		<h2 class="gold first">Choosing an Operating System</h2>
-		<p>it depends on your system and goals; it's best to plan first than to have to fix things later</p>
-		<p>do this by conducting a needs assessment and make sure you talk to a buncch of people about it; this author is a little crazy on theneeds assessment</p>
-		<h3 class="gold">Selecting a Distribution</h3>
-		<p>Some guiding questions:
-			<ul class="list">
-				<li>will the system function as a workstation or as a server?</li>
-				<li>does the distribution offer support? For corporate jobs, it's best to have a well-supported distribution</li>
-				<li>will the applications you need run onn the distribution?</li>
-			</ul>
-		</p>
-		<h3 class="gold">Verifying System Requirements and Hardware Compatibility</h3>
-		<p>make sure that Linux drivers exist for all of your devices</p>
-		<p>distributions will have hardware compatibility lists (<span class="acro">HCL</span>s) where you can search for your system hardware to double check that it is covered; find the HCL on the distribution's website <span class="note">note: some distribbutions don't have HCLs</span></p>
-		<p>make sure that your hardware has enough memory, disk space, and processing power for the distribution you want</p>
-		<p>the distribution version you get must match your PC's architecture (<span class="eg">eg: x86, Alpha)</span></p>
-
-		<h2 class="gold">Common Linux Implementations</h2>
-		<p>common uses: desktop, server, embedded firmware, for virtualization, with cloud computing</p>
-		<h3 class="gold">Desktop</h3>
-		<p>two main reasons why Linux as a desktop has been unpopular:
-			<ol class="list">
-				<li>until recently, productivity apps (like spreadsheets, word processors) haven't been developed for desktop versions of Linux</li>
-				<li>many people are intimidated by Linux</li>
-			</ol>
-		</p>
-		<p>popular desktop distributions: Ubuntu, openSUSE, Fedora</p>
-		<h3 class="gold">Server</h3>
-		<p>Linux is more popular as a server</p>
-		<p>it is used as a file server, print server, database server, web server, email server</p>
-		<p>it's extremely stable, rarely crashes; very fast; less expensive</p>
-		<h3 class="gold">For Virtualization</h3>
-		<p>traditionally, one OS is installed on one device, which has full reign over all resources on the server hardware succh as RAM, processor time, storage devices, and network interfaces</p>
-		<p>however, the OS doesn't fully utilize all of these resources all of the time - this means there are wasted resources; usually each resource is at about 8-9% usage capacity</p>
-		<p>virtualization pools multiple OS instances onto the same physical hardware and lets them run concurrently, thus making the use of the hardware more efficcient</p>
-		<p>to do this, virtualization uses a <u>hypervisor</u> to manage access to system resources</p>
-		<p>virtualization allows multiple platforms to run at the same time on the same hardware</p>
-		<p>virtualization is a key component of cloud computing</p>
-	</div>
-
 <!-- ----------------------------------------------------Blue Book Chapter 2------------------------------------------------------------------------ -->
-	<div class="blue section">
+	<div class="blue section"> <a id="blue-ch2"></a>
 		<h2 class="blue first">Investigating Linux's Principles and Philosophy</h2>
 		<h2 class="blue">Linux Through the Ages</h2>
 		<h3 class="blue">Understanding Linux's Origins</h3>

@@ -1,4 +1,4 @@
-# linux-essentials-notes
+# Notes for the Linux Essentials certificate
 Notes for studying for LPI's Linux Essentials certificate
 
 In order to load the text, you'll have to have a local server. 

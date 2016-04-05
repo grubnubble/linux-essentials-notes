@@ -1,0 +1,77 @@
+<div class="gold section" id="blue-ch2"> 
+	<h2 class="gold first">Getting Around in Linux</h2>
+	<h2 class="gold">Booting the System and Logging In</h2>
+	<h3 class="gold">Booting</h3>
+	<p>to boot, just push the power button and wait</p>
+	<p>you may see a graphical boot menu displayed that allows you to select which OS to use</p>
+	<p>this  boot menu is managed by the <span class="acro">GRUB</span> (GRand Unified Bootloader) or GRUB2 bootloader or LILO for older distributions</p>
+	<p>the boot menu can be customized by editing the grub.conf file within the /etc/ directory</p>
+	<h3 class="gold">Logging In</h3>
+	<p>once the system starts up, you need to authenticate; this is usually done through a graphical environment (runlevel 5), but can be done through a text-based environment (which is more common for servers)</p>
+	<p>the login info is stored in the /etc/passwd file</p>
+	<p>the type of environment loaded is determnined by the /etc/inittab file (specifically the inittab parameter)
+		<ul class="list">
+			<li>runlevel 3 &#8594; text-mode</li>
+			<li>runlevel 5 &#8594; graphical</li>
+			<li>if you log in at runlevel 5, you can boot into text mode by # init 3; to go back to graphical, # startx or # X</li>
+		</ul>
+	</p>
+	<h3 class="gold">Keeping Information Secure</h3>
+	<p>$ logout when you're done</p>
+	<p>use screen filters, which reduce the viewing angle of the monitor display</p>
+	<h3 class="gold">Shutting Down the System</h3>
+	<p>shutting down before turning off the computer ensures that any pending disk write operations will be committed to disk</p>
+	<p>on the command line:
+		<ul class="list">
+			<li>$ init 0 //switches to runlevel 0, which halts the system</li>
+			<li>$ init 6 //reboots</li>
+			<li>$ halt //shuts down the system</li>
+			<li>$ reboot</li>
+			<li>$ shutdown //has options for messages, when to shut down, keeps others from logging on before the shutdown</li>
+		</ul>
+	</p>
+
+	<h2 class="gold">Using the Linux Graphical Desktop Environment</h2>
+	<h3 class="gold">The Linux Graphical User Interfacee</h3>
+	<p>X Window System = X Windows = X11 = X</p>
+	<h3 class="gold">Grpahical Desktop Components</h3>
+	<p>the Linux GUI is modular, so you can mix and match different components as you like &#8594; Linux is more flexible than other OSs</p>
+	<p>the Linux GUI is composed of:
+		<ol class="list">
+			<li>X server: this is the heart of the Linux GUI; it draws the windows on screen, manages the mouse and keyboard; it's called a server because it can display output on any other system that's on the original computer's X network
+				<p>two main X server software packages that have been used for Linux:
+					<ul class="list">
+						<li>XFree86: was the default until about 2004</li>
+						<li>X.org-X11: most common one today; X.org is based on XFree86; licensing issues with XFree86 caused users to turn toward X.org<li>
+					</ul>
+				</p>
+			</li>
+			<li>Window manager: its job is to customize how windows look and behave
+				<p><span class="eg">some egs:
+					<ul class="list">
+						<li>enlightenment: more complex and full-featured; commonly used with GNOME</li>
+						<li>fvwm: very basic, minimalistic</li>
+						<li>kwin: more complex and full-featured; commonly used with KDE</li>
+						<li>sawfish: more complex and full-featured; commonly used with GNOME</li>
+						<li>twm: very basic, minimalistic</li>
+						<li>wmaker: very basic, minimalistic</li>
+					</ul>
+				</span></p>
+			</li>
+			<li>Desktop environment: adds tools and utilities, ties all components together; optional, modular; <span class="eg">two main examples: KDE (default on Fedora) and GNOME (default on openSUSE)</span></li>
+		</ol>
+	</p>
+	<h3 class="gold">Graphical Environment Configuration Settings</h3>
+	<p>the configuration files are stored in /etc/</p>
+	<p>it's important to configure your GUI correctly, otherwise your hardware can be damaged; for this reason, it's better to use a configuration utility (try $ sax2) than to adjust the text of the config file</p>
+	<p>after you make configuration changes:
+		<ul class="list">
+			<li>test your changes to make sure that they work properly</li>
+			<li>you must restart the X server: do this by rebooting or logging out and logging in or switching to the init directory and restarting the desktop  manager with its init scripts (such as xdm) [idk what this last option means]</li>
+			<li>if your X server "gets hung," you can kill it with CTL+ALT+BACKSPACE</li>
+		</ul>
+	</p>
+
+	<h2 class="gold">Using the Command Line Environment</h2>
+	<p>more in Chapter 5, but the basic syntax is: $[command] [script or program filename]</p>
+</div>

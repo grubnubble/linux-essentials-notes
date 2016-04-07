@@ -1,0 +1,52 @@
+<div class="gold section" id="gold-ch4"> 
+	<h2 class="gold first">Open Source Software</h2>
+	<p>the open source and free software movements have similar approaches, but different goals; free software aims to keep all software projects open and changeable and distributable; open source only needs to have the source code available - it's focus is  only on how much better the software can be when many developers collaborate -- in practice this means that there may be some proprietary aspects (Richard Stallman says that the term open source is an appeasement to business); open source ignores any ethical issues, whereas free software addresses them head on</p>
+	<p>some good terms to know when talking about open source and free software:
+		<ul class="list">
+			<li>Free Software Foundation (<span class="acro">FSF</span>): created by Richard Stallman; responsible for launching the GNU Project and GPL in the 1980s; it's mission is to promote the creation and proliferation of free (as in speech) software</li>
+			<li>Open Source Iniative (<span class="acro">OSI</span>): founded in the 1990s by Bruce Perens and Eric S. Raymond; focuses on making open source software available; alternative to mainstream businesses (but often work with businesses)</li>
+			<li><span class="note">note: FSF (more radical) and OSI (more moderate) are frequently at odds</span></li>
+			<li>Free and Open Source Software (<span class="acro">FOSS</span>): a term that attempts to overcome the rift between FSF and OSI; attempt for neutrality</li>
+			<li><span class="note">note: free software is open source, but open source not always free software</span></li>
+			<li>Free Libre Open Source Software (<span class="acro">FLOSS</span>): more neutral than FOSS</li>
+			<li>Berkeley Software Distribution (<span class="acro">BSD</span>): another clone of Unix; cousin of Linux; originally proprietary; its children are FreeBSD and NetBSD</li>
+			<li>Creative Commons: a copyright alternative that is more open than the typical "all rights reserved" model; most often used for digital artwork</li>
+		</ul>
+	</p>
+
+	<h2 class="gold">Open Source Software Development</h2>
+	<h3 class="gold">Software Development Models</h3>
+	<p>open source software is usually developed collaboratively</p>
+	<p>two common development models:
+		<ul class="list">
+			<li><u>Cathedral Model</u>: access to source code <u>during</u> development is limited to the small group of specific programmers; it's more structured and less collaborative</li>
+			<li><u>Bazaar Model</u>: less organized; "fairly chaotic"; extensively collaborative</li>
+		</ul>
+	</p>
+	<h3 class="gold">Package Management Tools and Repositories</h3>
+	<p>you've got two choices:
+		<ul class="list">
+			<li>install a precompiled application from a software <u>package</u>: these are also preconfigured</li>
+			<li>install from <u>source</u>: you compile it on your system, which makes executables that will run on your hardware and distribution; you must have a compiler (such as gcc) to do this</li>
+		</ul>
+	</p>
+	<p>package managers install software, update software that's already been installed, uninstall software, query installed software, and verify the integrity of installed software
+		<ul class="list">
+			<li>stores information about the state of the installed software in a database</li>
+			<li>also maintains a database of dependencies and version information for software</li>
+		</ul>
+	</p>
+	<p>Red Hat: rpm; $rpm -i <em>package_filename; and yum, which checks for dependencies; $yum install <em>package_name</em></em></p>
+	<p>Debian: dpkg; $dpkg -i <em>package_filename</em></p>
+	<h3 class="gold">Open Source Business Model</h3>
+	<p>how to generate revenue on open source projects?
+		<ul class="list">
+			<li>contributions (from anyone I guess??)</li>
+			<li>added functionality: a better version is available for money</li>
+			<li>support contracts: an option to pay for technical support</li>
+			<li>training contracts: can pay for training</li>
+			<li>partnerships: with commercial organizations - two versions of the software are created; the commercial version finances the free version</li>
+			<li>subscriptions</li>
+		</ul>
+	</p>
+</div>

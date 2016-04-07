@@ -1,0 +1,53 @@
+<div class="blue section" id="blue-ch4"> 
+	<h2 class="blue first">Using Common Linux Programs</h2>
+	<h2 class="blue">Using a Linux Desktop Environment</h2>
+	<p>a desktop environment is a set of programs that control the screen and provide small utility programs</p>
+	<h3 class="blue">Choosing a Desktop Environment</h3>
+	<p>a widget set is a library for menus, dialog boxes; <span class="eg">egs: GTK+, Qt</span></p>
+	<p>most common desktop environments:
+		<ul class="list">
+			<li><span class="acro">KDE</span> (K Desktop Environment): default for Mandriva and SUSE; uses Qt widget set</li>
+			<li><span class="acro">GNOME</span> (GNU Networking Object Model Environment): default for Fedora, Debian; uses <span class="acro">GTK+</span> (GIMP Tool Kit); provides fewer options than KDE in order to make it easier to use</li>
+			<li><span class="acro">LXDE</span> (Lightweight X11 Desktop Environment): designed to consume few resources; good for old or less powerful computers</li>
+			<li>Unity: aim is simplicity; released with Ubuntu in 2010</li>
+			<li>Xfce: uses GTK+; more configurable than GNOME or Unity and more lightweight than most desktop environments</li>
+			<li>Roll-Your-Own: you can always create your own combination of components and have a custom desktop environment</li>
+		</ul>
+	</p>
+	<p>it's possible to install multiple environments -- you'll be able to select which one to use when you log in</p>
+	<p>a large portion of this chapter just tells you how to navigate a desktop environment</p>
+
+	<h2 class="blue">Using Server Programs</h2>
+	<h3 class="blue">Identifying Common Server Protocols and Programs</h3>
+	<p>networks function by means of network <u>protocols</u>: clearly defined descriptions of how two computers should exchange information</p>
+	<p>Request for Comments (<span class="acro">RFC</span>): a standards document for protocols (the written rules that the protocol should follow); these are numbered documents</p>
+	<p><u>port</u>: a numbered resource on a computer; it is the means by which data is transferred in a network; a server program attaches itself to a port number and receives all incoming requests on that port</p>
+	<p>/etc/services links common port numbers to short names</p>
+	<p>some protocols are just for local networks (<span class="eg">egs: <span class="acro">DHCP</span> [Dynamic Host Configuration Protocol]</span>); others are generally for internet (<span class="eg">eg: <span class="acro">HTTP</span> [Hypertext Transfer Protocol]</span>), though can be used for a local network</p>
+	<p>the term "server" can refer to a computer or to a single program running on that computer</p>
+	<p>server computers are often more powerful than client computers</p>
+	<h3 class="blue">Installing and Launching Servers</h3>
+	<p>install them the same as you would any other software</p>
+	<p>typically, you launch a server by configuring the computer to run it automatically when it boots; it is then run in the background as a <u>daemon</u>, which is a program that runs unattended</p>
+	<h3 class="blue">Securing Servers</h3>
+	<p>potential server problems: bugs, misconfiguration, remote access users, can be swamped with bogus data (this is called a denial-of-service [<span class="acro">DoS</span>] attack)</p>
+	<p>to prevent problems: keep your server programs up-to-date; use secure server programs, make sure you configure it correctly; remove unused user accounts; use firewalls</p>
+
+	<h2 class="blue">Managing Programming Languages</h2>
+	<p>it's important to know the basics of some main programming languages in case you need to install them for a user</p>
+	<h3 class="blue">Choosing a Compiled vs. an Interpreted Language</h3>
+	<ul class="list">
+		<li><u>compiled</u>: a program written in a compiled language is completely compiled once the entire program is written (compiled means converted to machine code); once compiled, the code executes quickly</li>
+		<li><u>interpreted</u>: these prorgrams are converted to machine code when the program is run -- this is done by an interpreter; interpretation is done line-by-line -- therefore the program as a whole is never completely compiled; this means that interpreted languages are much slower than compiled languages, but interpreted languages are easier to develop with</li>
+		<li><u>assembly language</u>: one-to-one correspondence between machine code numbers and the symbols used by programmers; very low-level; difficult to develop, but able to be extremely efficient and richly complex; non-portable (only works for that machine)</li>
+	</ul>
+	<h3>Identifying Common Programming Languages</h3>
+	<ul class="list">
+		<li>C: compiled; most of the Linux kernel is written in C</li>
+		<li>C++: compiled; gives object oriented features to C</li>
+		<li>Java: somewhere between compiled and interpreted</li>
+		<li>Perl: interpreted</li>
+		<li><span class="acro">PHP</span> (PHP Hypertext Preprocessor): interpreted; created to generate dynamic web content</li>
+		<li>Python: interpreted; code readability is a major goal; supports object orientation</li>
+		<li>shell scripting: interpreted shell languages; <span class="eg">eg: bash</span></li>
+	</ul>
